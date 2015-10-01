@@ -7,7 +7,7 @@
     $scope.user = user;
     $scope.FBURL = FBURL;
     var playersRef = new Firebase(FBURL).child("players");
-    var query = playersRef.limitToFirst(20);
+    var query = playersRef.limitToFirst(400);
 
     var players = $firebaseArray(query);
 

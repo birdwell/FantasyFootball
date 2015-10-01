@@ -59,3 +59,13 @@ body {
     font-size: 36px;
     font-weight: 300;
 }
+.adpContain{
+    display: inline-block;
+}
+.playerName, .playerOvr, .playerPosition {
+    padding-top: 4%;
+}
+
+.adpContain {
+    padding-top: 2.75%;
+}
