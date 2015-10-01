@@ -7,15 +7,16 @@ angular.module('myApp', [
     'myApp.home',
     'myApp.account',
     'myApp.chat',
-    'myApp.login'
+    'myApp.login',
+    'myApp.ranking'
   ])
-  
+
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({
       redirectTo: '/home'
     });
   }])
-  
+
   .run(['$rootScope', 'Auth', function($rootScope, Auth) {
     // track status of authentication
     Auth.$onAuth(function(user) {

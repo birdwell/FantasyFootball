@@ -37,34 +37,25 @@ body {
   padding: 0;
 }
 
-p.status {
-   color: red;
-}
-
-p.status.good, p.good {
-   color: green;
-}
-
-form label {
-   display: block;
-   margin: 15px 0;
-}
-
-form label span {
-   display: block;
-   font-weight: bold;
-}
-
-.error {
-   color: red;
-}
-
-fieldset {
-   float: left;
-   margin-right: 25px;
-   padding: 25px;
-}
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
+}
+
+
+/* Player Wells */
+.player {
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    border-top: solid 1px #D6D6D6;
+    border-left: solid 1px #D6D6D6;
+    border-right: solid 1px #D6D6D6;
+    padding: 20px;
+}
+.playerImg {
+    border-radius: 2px;
+    width: 150px;
+}
+.adp {
+    font-size: 36px;
+    font-weight: 300;
 }

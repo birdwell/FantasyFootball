@@ -1,18 +1,25 @@
 (function(angular) {
   "use strict";
 
-  var app = angular.module('myApp.home', ['firebase.auth', 'firebase', 'firebase.utils', 'ngRoute']);
+  var app = angular.module('myApp.ranking', ['firebase.auth', 'firebase', 'firebase.utils', 'ngRoute']);
 
-  app.controller('HomeCtrl', ['$scope', 'fbutil', 'user', '$firebaseObject', 'FBURL', function ($scope, fbutil, user, $firebaseObject, FBURL) {
-    $scope.syncedValue = $firebaseObject(fbutil.ref('syncedValue'));
+  app.controller('RankingCtrl', ['$scope', 'fbutil', 'user', '$firebaseObject', 'FBURL', "$firebaseArray", function ($scope, fbutil, user, $firebaseObject, FBURL, $firebaseArray) {
     $scope.user = user;
     $scope.FBURL = FBURL;
+    var playersRef = new Firebase(FBURL).child("players");
+    var query = playersRef.limitToFirst(20);
+
+    var players = $firebaseArray(query);
+
+    $scope.players = players;
+    console.log(players);
+
   }]);
 
   app.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/home', {
-      templateUrl: 'home/home.html',
-      controller: 'HomeCtrl',
+    $routeProvider.when('/ranking', {
+      templateUrl: 'ranking/ranking.html',
+      controller: 'RankingCtrl',
       resolve: {
         // forces the page to wait for this promise to resolve before controller is loaded
         // the controller can then inject `user` as a dependency. This could also be done
