@@ -1,71 +1,332 @@
 /* app css stylesheet */
 
-body {
-  margin: 10px;
+body#madden {
+  background-color: #eee;
 }
-
+#global-header .container {
+  background: #272727;
+  position: relative;
+  z-index: 1000040;
+  margin-right: 16px;
+}
+#global-header .container>h1 {
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  margin-top: 0px;
+  left: 22px;
+}
+#global-header .container>h1:before, #global-header .container>h1:after {
+  -webkit-transform: skew(-25deg, 0);
+  -ms-transform: skewX(-25deg) skewY(0);
+  transform: skew(-25deg, 0);
+  content: '';
+  display: block;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+#global-header .container>h1:before {
+  background: #c00;
+  width: 110px;
+}
+#global-header .container>h1:after {
+  background: #b00000;
+  left: -10px;
+  width: 130px;
+  z-index: -1;
+}
+#global-header .container>h1 a {
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -moz-transition-property: all .2s ease-in-out;
+  -ms-transition-property: all .2s ease-in-out;
+  -o-transition-property: all .2s ease-in-out;
+  -webkit-transition-property: all .2s ease-in-out;
+  transition-property: all .2s ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  color: rgba(255, 255, 255, 0);
+  font-size: 15px;
+  text-shadow: none;
+  display: block;
+  height: 50px;
+  position: relative;
+  width: 110px;
+}
+#global-header .container>h1 .progress {
+  background-position: 16px 50%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+#global-header .container>h1 .progress .bar:before {
+  -webkit-transform: skew(-25deg, 0);
+  -ms-transform: skewX(-25deg) skewY(0);
+  transform: skew(-25deg, 0);
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -moz-transition-property: width .25s ease-out;
+  -ms-transition-property: width .25s ease-out;
+  -o-transition-property: width .25s ease-out;
+  -webkit-transition-property: width .25s ease-out;
+  transition-property: width .25s ease-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  background: #800;
+  content: '';
+  display: block;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+}
+#global-header .container>h1 .progress .bar.p25:before {
+  width: 75%;
+}
+#global-header .container>h1 .progress .bar.p50:before {
+  width: 50%;
+}
+#global-header .container>h1 .progress .bar.p75:before {
+  width: 25%;
+}
+#global-header .container>h1 .progress .bar.p100:before {
+  width: 0;
+}
+#global-header .container .tools {
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+}
+#global-header .container .tools>li {
+  float: left;
+  line-height: 50px;
+  list-style-type: none;
+  position: relative;
+  text-align: center;
+}
+#global-header .container .tools>li.search>a, #global-header .container .tools>li.user>a {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding-top: 50px;
+  position: relative;
+  width: 44px;
+}
+#global-header .container .tools>li.search.active #global-search {
+  border-bottom: 5px solid #272727;
+  width: 300px;
+}
+#global-header .container .tools>li.search #global-search {
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -moz-transition-property: width .25s ease;
+  -ms-transition-property: width .25s ease;
+  -o-transition-property: width .25s ease;
+  -webkit-transition-property: width .25s ease;
+  transition-property: width .25s ease;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  overflow: hidden;
+  position: absolute;
+  right: 44px;
+  top: 0;
+  width: 0;
+  padding: 5px 0 0;
+}
+#global-header .container .tools>li.search #global-search .btn-search {
+  top: 5px;
+}
+#global-header .container .tools>li.user>a {
+  color: transparent;
+  font-size: 0;
+  text-shadow: none;
+}
+#global-header .container .tools>li.user.hover .global-user {
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+#global-header .container .tools>li.user.hover .global-user>ul {
+  display: inline-block;
+  padding-left: 30px;
+  vertical-align: top;
+  margin: 20px 0 0 -4px;
+}
+#global-header .container .tools>li.user.hover .global-user>ul:first-child {
+  padding-left: 0;
+  margin: 0;
+}
+#global-header .container .tools>li.user.hover .global-user>ul:first-child>li a {
+  display: block;
+  line-height: 160%;
+  margin-left: -10px;
+  padding: 10px;
+}
+#global-header .container .tools>li.user.hover .global-user>ul:first-child>li a:hover, #global-header .container .tools>li.user.hover .global-user>ul:first-child>li a:visited:hover {
+  background: #c00;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+#global-header .container .tools>li>a {
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -moz-transition-property: opacity .2s ease-out;
+  -ms-transition-property: opacity .2s ease-out;
+  -o-transition-property: opacity .2s ease-out;
+  -webkit-transition-property: opacity .2s ease-out;
+  transition-property: opacity .2s ease-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  color: #fff;
+  font-family: BentonSans, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 50px;
+  line-height: 100%;
+  text-align: left;
+  padding: 0 10px;
+}
+#global-header .container .tools>li>a:after {
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -moz-transition-property: color .2s ease-out;
+  -ms-transition-property: color .2s ease-out;
+  -o-transition-property: color .2s ease-out;
+  -webkit-transition-property: color .2s ease-out;
+  transition-property: color .2s ease-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  color: #fff;
+  font-size: 22px;
+  left: 0;
+  line-height: 50px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+#global-header .container .tools.focused>li>a:link, #global-header .container .tools.focused>li>a:visited {
+  color: #7b7b7b!important;
+}
+#global-header .container .tools.focused>li>a:hover, #global-header .container .tools.focused>li>a:visited:hover {
+  color: #fff!important;
+}
+.logged-out #global-header .container .tools>li.user a {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+  padding-top: 1px;
+  width: inherit;
+}
+.global-nav-collapse.secondary #global-header .container .tools.focused>li.active>a:link, .global-nav-collapse.secondary #global-header .container .tools.focused>li.active>a:visited, .global-nav-collapse.secondary #global-header .container .tools.focused>li.active>a:hover, .global-nav-collapse.secondary #global-header .container .tools.focused>li.active>a:visited:hover, .global-nav-collapse.secondary #global-header .container .tools.focused>li.inactive>a:link, .global-nav-collapse.secondary #global-header .container .tools.focused>li.inactive>a:visited, .global-nav-collapse.secondary #global-header .container .tools.focused>li.inactive>a:hover, .global-nav-collapse.secondary #global-header .container .tools.focused>li.inactive>a:visited:hover, .global-nav-collapse.secondary #global-header .container .tools.focused>li.hover>a:link, .global-nav-collapse.secondary #global-header .container .tools.focused>li.hover>a:visited, .global-nav-collapse.secondary #global-header .container .tools.focused>li.hover>a:hover, .global-nav-collapse.secondary #global-header .container .tools.focused>li.hover>a:visited:hover, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.active>a:link, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.active>a:visited, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.active>a:hover, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.active>a:visited:hover, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.inactive>a:link, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.inactive>a:visited, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.inactive>a:hover, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.inactive>a:visited:hover, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.hover>a:link, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.hover>a:visited, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.hover>a:hover, .global-nav-collapse.tertiary #global-header .container .tools.focused>li.hover>a:visited:hover {
+  color: #333!important;
+}
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
-  padding: 0 0 0.5em;
+  transition-timing-function: ease-in-out;
+  background: #272727;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+  height: 50px;
+  margin-left: 0px;
 }
-
-.menu:before {
-  content: "[";
+.menu a {
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+  position: relative;
+  font-family: BentonSans, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
-
-.menu:after {
-  content: "]";
+.menu li {
+  float: left;
+  line-height: 50px;
+  list-style-type: none;
+  text-align: center;
 }
-
 .menu > li {
   display: inline;
+  position: relative;
+  left: 20px;
 }
-
 .menu > li.hide {
-   display: none;
+  display: none;
 }
-
 .menu > li:before {
   content: "|";
   padding-right: 0.3em;
 }
-
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
 }
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
+  display: none !important;
 }
-
 
 /* Player Wells */
+
 .player {
-    font-family: 'Muli', sans-serif;
-    font-size: 20px;
-    border-top: solid 1px #D6D6D6;
-    border-left: solid 1px #D6D6D6;
-    border-right: solid 1px #D6D6D6;
-    padding: 20px;
+  font-family: 'Muli', sans-serif;
+  font-size: 20px;
+  border-top: solid 1px #D6D6D6;
+  padding: 20px;
 }
 .playerImg {
-    border-radius: 2px;
-    width: 150px;
+  border-radius: 2px;
+  width: 150px;
 }
 .adp {
-    font-size: 36px;
-    font-weight: 300;
+  font-size: 36px;
+  font-weight: 300;
 }
-.adpContain{
-    display: inline-block;
+.adpContain {
+  display: inline-block;
 }
 .playerName, .playerOvr, .playerPosition {
-    padding-top: 4%;
+  padding-top: 4%;
 }
-
 .adpContain {
-    padding-top: 2.75%;
+  padding-top: 2.75%;
+}
+#players {
+  background-color: #fff;
+  border: 1px #ddd solid;
+  border-radius: 3px;
+}
+#players > .player:first-child {
+  border-top: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+#players > .player:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.main {
+    padding-top: 85px;
+}
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
 }
