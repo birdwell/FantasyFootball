@@ -3,6 +3,25 @@
 body#madden {
   background-color: #eee;
 }
+#global-header a:hover {
+    color: white;
+    opacity: 1 !important;
+}
+#global-header a {
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+#global-header:hover a {
+    opacity: 0.2;
+}
+#global-header:hover ul:hover a {
+    opacity: 0.5;
+}
+#global-header:hover ul:hover a:hover {
+    opacity: 1;
+}
 #global-header .container {
   background: #272727;
   position: relative;
@@ -329,4 +348,8 @@ body#madden {
     position: fixed;
     width: 100%;
     z-index: 99999;
+}
+h1.rankingHeader {
+    text-align: center;
+    padding-bottom: 15px;
 }
